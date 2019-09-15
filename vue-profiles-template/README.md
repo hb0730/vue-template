@@ -79,7 +79,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 	})
   ```
   在不同接口地址下启动项目的时候，直接用对应的命令`npm run dev`、`npm run dev_test`、`npm run dev_prod`就可以了，再也不用去文件中修改接口地址了。<br>
- 2. 打包项目时，需要修改`/config/prod.env.js`和`/src/main.js`文件
+ 2. 打包项目时，需要修改`/config/prod.env.js`和`/src/main.js`文件<br>
 	1. 在`/config/prod.env.js`中，通过process.argv获取一个命令数组，并为其配置相应的接口地址
 	```
 	'use strict'
@@ -119,6 +119,5 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 		  template: '<App/>'
 		})
 	```
-	在打包不同环境下项目的时候，直接用对应的命令`npm run build`、`npm run build test`、`npm run build prod`就可以了，再也不用去文件中修改接口地址了。
-	
+	在打包不同环境下项目的时候，直接用对应的命令`npm run build`、`npm run build test`、`npm run build prod`就可以了，再也不用去文件中修改接口地址了。<br>
 	感谢`darkerXi` 参考地址 https://segmentfault.com/a/1190000016308995
