@@ -22,8 +22,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 # 步骤
 ## NPM RUN 本地运行
-1. 启动项目时，需要修改`/package.json`、`/config/dev.env.js`和`/src/main.js`文件
- 1. 在`/package.json`中，为启动命令设置不同的参数
+>*启动项目时，需要修改`/package.json`、`/config/dev.env.js`和`/src/main.js`文件
+  >>*在`/package.json`中，为启动命令设置不同的参数
  ```
 	"scripts": {
 		"dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -36,7 +36,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 		"build": "node build/build.js"
 	}
  ```
-  2.  在`/config/dev.env.js`中，通过`process.argv`获取一个命令数组，并为其配置相应的接口地址
+  >>*在`/config/dev.env.js`中，通过`process.argv`获取一个命令数组，并为其配置相应的接口地址
   ```
 	'use strict'
 	const merge = require('webpack-merge')
@@ -60,7 +60,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 	　baseUrl: baseUrl
 	})
   ```
-  3. 在`/src/main.js`中，通过`process.env.baseUrl` 获取`/config/dev.env.js`文件的`baseUrl`并将其挂载在Vue的原型上
+  >>*在`/src/main.js`中，通过`process.env.baseUrl` 获取`/config/dev.env.js`文件的`baseUrl`并将其挂载在Vue的原型上
   ```
 	import Vue from 'vue'
 	import App from './App'
@@ -79,8 +79,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 	})
   ```
   在不同接口地址下启动项目的时候，直接用对应的命令`npm run dev`、`npm run dev_test`、`npm run dev_prod`就可以了，再也不用去文件中修改接口地址了。<br>
- 2. 打包项目时，需要修改`/config/prod.env.js`和`/src/main.js`文件<br>
-	1. 在`/config/prod.env.js`中，通过process.argv获取一个命令数组，并为其配置相应的接口地址
+ >*打包项目时，需要修改`/config/prod.env.js`和`/src/main.js`文件<br>
+	>>*在`/config/prod.env.js`中，通过process.argv获取一个命令数组，并为其配置相应的接口地址
 	```
 	'use strict'
 	let params = process.argv[2]
@@ -101,7 +101,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 	　baseUrl: baseUrl
 	})
 	```
-	2. 在`/src/main.js`中，通过`process.env.baseUrl` 获取`/config/prod.env.js`文件的baseUrl并将其挂载在Vue的原型上
+	>>*在`/src/main.js`中，通过`process.env.baseUrl` 获取`/config/prod.env.js`文件的baseUrl并将其挂载在Vue的原型上
 	```
 		import Vue from 'vue'
 		import App from './App'
